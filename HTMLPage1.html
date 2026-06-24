@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+
+<html lang="de" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title> Lernapp </title>
+    <link rel="stylesheet" href="StyleSheet1.css" >
+</head>
+<body>
+
+    <div id="room">
+        <div id="level-circle">
+            <span id=" level">0</span>
+        </div>
+
+        <div id="xp-container">
+            XP: <span id=" xp">0</span>/100
+        </div>
+
+        <div id="desk-hitbox"></div>
+
+    </div>
+
+    <!--Choose Timer popup-->
+    <div id="timer-meue" class="hidden">
+        <h2> Lernsession</h2>
+        <button onclick="startTimer(120, 10)">
+            2 Minuten (+10 XP)
+        </button>
+        <button onclick="startTimer(300, 25)">
+            5 Minuten (+25 XP)
+        </button>
+        <button onclick="startTimer(600, 60)">
+            10 Minuten (+60 XP)
+        </button>
+        <button onclick="startTimer(900, 90)">
+            15 Minuten (+90 XP)
+        </button>
+        <button onclick="startTimer(1800, 200)">
+            30 Minuten (+200 XP)
+        </button>
+        <button onclick="startTimer(2700, 350)">
+            10 Minuten (+350 XP)
+        </button>
+        <button onclick="startTimer(3600, 500)">
+            60 Minuten (+500 XP)
+        </button>
+
+
+        <button onclick="closeMenu()">
+            Scließen
+        </button>
+    </div>
+
+    <!-- Learn Timer popup-->
+    <div id="timer-window" class="hidden">
+        <h2> Study Time</h2>
+        <div id="timer-display">
+            05:00
+        </div>
+    </div>
+    <script src="Script1.js"></script>
+</body>
+</html>
