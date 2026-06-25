@@ -1,0 +1,61 @@
+﻿body
+{
+    margin:0;
+    overflow:hidden;
+    font-family:monospace;
+}
+
+/* background, add url*/
+#room {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("");
+    background-size: cover;
+    background-position: center;
+
+    position: relative;
+}
+/* Menu*/
+#timer-menu{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    background: #d9c8a9;
+    border: 4px solid #6f4e37;
+    padding: 20px;
+    z-index=10;
+}
+
+#timer-menu button{
+    display:block;
+    width:250px;
+    margin:10px 0;
+    padding:10px;
+}
+/* Timer*/
+#timer-window {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: black;
+    border: 4px solid #777;
+    color:#3cff00;
+    padding: 30px;
+    z-index =20;
+}
+
+#timer-display{
+    font-size:60px;
+}
+
+.hidden{
+    display:none;
+}
+/* XP*/
+
+/* Level-Kreis*/
+
+/* Schreibtisch Kliickfläche*/
+
