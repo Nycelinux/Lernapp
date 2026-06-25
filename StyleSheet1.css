@@ -54,8 +54,42 @@
     display:none;
 }
 /* XP*/
+#xp-container {
+    position: absolute;
+    top: 100px;
+    left: 20px;
+    background: rgba(0,0,0,0.6);
+    border-radius: 8px;
+    color: antiquewhite;
+    padding: 10px;
+}
 
 /* Level-Kreis*/
+#level-circle {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: #2d5a3d;
+    border: 4px solid #f4e7c5;
+    color: antiquewhite;
+    font-size:28px;
+    font-weight: bold;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
 
 /* Schreibtisch Kliickfläche*/
+#desk-hitbox {
+    position: absolute;
+    right:290px;
+    bottom:170px;
+    width: 250px;
+    height: 180px;
+    cursor: pointer;
+}
 
