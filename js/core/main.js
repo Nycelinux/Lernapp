@@ -35,7 +35,7 @@ function startTimer(seconds, rewardXP) {
 
         if (time < 0) {
             clearInterval(interval);
-            timerWindow.classList.add(hidden);
+            timerWindow.classList.add("hidden");
             addXP(rewardXP);
             alert(`Gut gemacht, Lernsession beendet! + ${rewardXP} XP`);
         }
