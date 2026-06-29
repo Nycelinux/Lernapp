@@ -6,14 +6,14 @@ Cozy Pixel-Art Lernspiel, entwickelt mit HTML, CSS und JS.
 Soll zum lernen motivieren, der Spieler befindet sich in einem gemütlichen Pixelzimmer. Durch Lerneinheiten sammelt man XP, steigt Level auf und schaltet nach und nach neue Inhalte frei.
 ---
 ## Funktionen version 0.1
-[] Pixelzimmer
-[] klickbarer Schreibtisch
-[] Timer
-[] Level- und XP-System
-[] Profilfenster
-[] automatisches Speichern
+[ ] Pixelzimmer
+[ ] klickbarer Schreibtisch
+[ ] Timer
+[ ] Level- und XP-System
+[ ] Profilfenster
+[ ] automatisches Speichern
 ---
-##Projektstruktur
+## Projektstruktur
 Lernapp/
 assets/
 css/
