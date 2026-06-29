@@ -3,29 +3,42 @@
 <html lang="de" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title> Lernapp </title>
     <link rel="stylesheet" href="style.css" >
 </head>
 <body>
+    <div id="game">
+        <div id="room">
+            <div id="player-sign">
+                <div class="leaf leaf-left"></div>
+                <div class="leaf leaf-right"></div>
+                <div id"sign-content">
+                    <div id="level-text">
+                        Lvl. <span id="level">0</span>
+                    </div>
 
-    <div id="room">
-        <div id="level-circle">
-            <span id="level">0</span>
+                    <div id="xp-bar">
+                        <div id="xp-fill"></div>
+                    </div>
+                    <div id="xp-text">
+                        0/100 XP
+                    </div>
+                </div>
+
+            </div>
+
+            <!--Hitboxen-->
+            <!--Schreibtisch-->
+            <div id="desk-hitbox"></div>
+            <!--Bett-->
+            <!--Bücherregal-->
+            <!--Planzen-->
+
+
         </div>
-
-        <div id="xp-container">
-            <!--replace-->
-            XP: <span id="xp">0</span>/100
-        </div>
-
-        <div id="xp-fill">
-           <div id="xp-fill"></div>
-        </div>
-
-        <div id="desk-hitbox"></div>
 
     </div>
-
     <!--Choose Timer popup-->
     <div id="timer-menu" class="hidden">
         <h2> Lernsession</h2>
@@ -59,11 +72,50 @@
 
     <!-- Learn Timer popup-->
     <div id="timer-window" class="hidden">
-        <h2> Study Time</h2>
+        <div id="retro-title">
+            <h2> Study Time</h2>
+        </div>
         <div id="timer-display">
-            05:00
+            00:00
         </div>
     </div>
+
+    <!-- pixel popup-->
+    <div id="popup" class="hidden">
+        <h2 id="popup-title">
+            Gut gemacht!
+        </h2>
+        <p id="popup-message">+25 XP</p>
+        <button id="popup-button">Weiter</button>
+    </div>
+
+    <!-- player profile-->
+    <div id="profile-window" class="hidden">
+        <h2>Charakter</h2>
+        <hr>
+        <p>
+            Level: <span id="profile-level">0</span>
+        </p>
+        <p>
+            AKtuelle XP: <span id="profile-current-xp">0</span>
+        </p>
+        <p>
+            Benötigte XP: <span id="profile-needed-xp">100</span>
+        </p>
+        <p>
+            Gesamt XP: <span id="profile-total-xp">0</span>
+        </p>
+        <p>
+            Gesamtlernzeit: <span id="profile-study-time">0 Minuten</span>
+        </p>
+
+        <!-- Haustiere,Dekorationen, Lernserie, Quests später-->
+
+        <button id="close-profile">Schließen</button>
+
+
+    </div>
+
     <script src="js/core/main.js"></script>
 </body>
 </html>
