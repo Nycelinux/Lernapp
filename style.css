@@ -1,89 +1,149 @@
-﻿body
-{
-    margin:0;
-    overflow:hidden;
-    font-family:monospace;
+﻿/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ Inhalt:
+    1.Farben(root)
+    2.Grundeinstellungen
+    3.Hintergrund
+    4.Holzschild
+    5.XP-Leiste
+    6.Hitboxen
+    7.Timer
+    8.Popup
+    9.Profil
+    10.Animationen
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+/*1.Farben*/
+:root {
+    --wood-dark: #6F4E37;
+    --wood-light: #C8A878;
+    --cream: #F6F1E7;
+    --green: #507B4F;
+    --green-light: #89C07A;
+    --shadow: rgba(0,0,0,0.35);
+    --retro-dark: #222;
+    --retro-green: #56ff70;
 }
 
-/* background, add url*/
+
+/*2.Grundeinstellungen*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+
+html,body
+{
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    font-family:monospace;
+    background:#222;
+}
+
+img{
+    image-rendering:pixelated;
+}
+.hidden{
+    display:none !important;
+}
+/*3.Hintergrund*/
+#game {
+    width: 100vw;
+    height: 100vh;
+    overflow:hidden;
+    position:relative;
+}
+
 #room {
     width: 100vw;
     height: 100vh;
     background-image: url("assets/room.png");
     background-size: cover;
     background-position: center;
-
+    background-repeat:no-repeat;
     position: relative;
 }
-/* Menu*/
-#timer-menu{
-    position:absolute;
-    top:50%;
-    left:50%;
-    transform:translate(-50%,-50%);
-    background: #d9c8a9;
-    border: 4px solid #6f4e37;
-    padding: 20px;
-    z-index:10;
-}
 
-#timer-menu button{
-    display:block;
-    width:250px;
-    margin:10px 0;
-    padding:10px;
-}
-/* Timer*/
-#timer-window {
+
+/* 4.Holzschild*/
+#player-sign {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    background: black;
-    border: 4px solid #777;
-    color:#3cff00;
-    padding: 30px;
-    z-index:20;
+    top: 24px;
+    left: 24px;
+    width: 180px;
+    padding: 12px;
+    border-radius: 10px;
+    background: var(--wood-light);
+    border: 5px solid var(--wood-dark);
+    cursor:pointer;
+    box-shadow:4px 4px 0px var(--shadow);
+    transition:transform .25s, box-shadow .25s;
+    animation:signFloat 5s ease-in-out infinite;
+    
 }
 
-#timer-display{
-    font-size:60px;
+#player-sign:hover{
+    transform:scale(1.04);
+    box-shadow:6px 6px 0px rgba(0,0,0,.45);
 }
 
-.hidden{
-    display:none;
-}
-/* XP*/
-#xp-container {
-    position: absolute;
-    top: 100px;
-    left: 20px;
-    background: rgba(0,0,0,0.6);
-    border-radius: 8px;
-    color: antiquewhite;
-    padding: 10px;
-}
-
-/* Level-Kreis*/
-#level-circle {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    background: #2d5a3d;
-    border: 4px solid #f4e7c5;
-    color: antiquewhite;
-    font-size:28px;
-    font-weight: bold;
-
+#sign-content{
     display:flex;
-    justify-content:center;
-    align-items:center;
+    flex-direction:column;
+    gap:10px;
 }
 
-/* Schreibtisch Kliickfläche*/
+/*Level*/
+#level-text{
+    color: #2b2b2b;
+    text-align:center;
+    font-size:22px;
+    font-weight:bold;
+}
+
+/*Blätter*/
+.leaf {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background: var(--green-light);
+    border-radius: 50% 0;
+}
+.leaf-left{
+    left:-8px;
+    top:-6px;
+    transform:rotate(-30deg);
+}
+.leaf-right {
+    right: -8px;
+    top: -6px;
+    transform: rotate(30deg);
+}
+
+/*5.XP-Leiste*/
+#xp-bar {
+    width: 100%;
+    height: 18px;
+    border: 2px solid #2c1c12;
+    background: #4e3827;
+    overflow: hidden;
+}
+
+#xp-fill {
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(to right,#65c76c,#9ee18a);
+    transition: width .4s;
+}
+
+#xp-text {
+    text-align: center;
+    font-size: 14px;
+    color: #222;
+}
+
+/* 6.Hitboxen*/
 #desk-hitbox {
     position: absolute;
     right:290px;
@@ -93,16 +153,168 @@
     cursor: pointer;
 }
 
-#xp-bar {
-    width: 180px;
-    height: 16px;
-    border: 2px solid antiquewhite;
-    background: #4e3d2b;
+/* 7.Timer*/
+#timer-menu {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 360px;
+    transform: translate(-50%,-50%);
+    background: #efe4cf;
+    border: 6px solid var(--wood-dark);
+    padding: 20px;
+    box-shadow: 8px 8px 0 rgba(0,0,0,.35);
+    z-index: 1000;
 }
 
-#xp-fill {
-    width: 0%;
-    height: 100%;
-    background:#7fd96b;
+#timer-menu h2{
+    color:#3d2b20;
+    text-align:center;
+    margin-bottom:18px;
+    font-size24px;
+}
+    #timer-menu button {
+        width: 100%;
+        margin-top: 10px;
+        padding: 12px;
+        background:#e5d4b7;
+        border:3px solid var(--wood-dark);
+        cursor:pointer;
+        font-size:16px;
+        transition: background .15s, transform .15s;
+    }
+#timer-menu button:hover{
+    transform:scale(1.02);
+    background:#d7c09d;
+}
+#timer-menu button:active{
+    transform:translateY(2px);
+
+}
+/*Retro-Timer*/
+
+#timer-window {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width:420px;
+    transform: translate(-50%,-50%);
+    background: #1b1b1b;
+    border: 6px solid #5d5d5d;
+    padding: 25px;
+    box-shadow: 0 0 30px rgba(0,0,0,.6);
+    z-index: 1100;
 }
 
+#retro-title{
+    text-align:center;
+    color: #8eff8a;
+    margin-bottom:20px;
+    letter-spacing:3px;
+    font-size:24px;
+}
+
+#timer-display {
+    font-size: 68px;
+    text-align:center;
+    color:var(--retro-green);
+    text-shadow:0 0 10px #5fff73;
+}
+
+#timer-window::after{
+    content:"";
+    position:absolute;
+    inset0;
+    pointer-events:none;
+    background: repeating-linear-gradient(transparent 0px, transparent 2px, rgba(255,255,255, 0.3) 3py;
+}
+/*8.Popup*/
+#popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 330px;
+    transform: translate(-50%,-50%);
+    background: var(--cream);
+    border: 6px solid var(--wood-dark);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 8px 8px 0px rgba(0,0,0,.4);
+    z-index: 1200;
+}
+
+#popup h2{
+    color:#35582d;
+    margin-bottom:15px;
+}
+
+    #popup-message {
+        line-height: 1.6;
+        margin-bottom: 20px;
+    }
+
+#popup button{
+
+    background:#d9c8a9;
+    padding: 10px 30px;
+    cursor:pointer;
+    border:3px solid var(--wood-dark);
+}
+
+#popup button:hover {
+    background: #cdb289;
+}
+
+
+/*9.Profil*/
+#profile-window {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 420px;
+    transform: translate(-50%,-50%);
+    background: var(--cream);
+    border: 6px solid var(--wood-dark);
+    border-radius: 10px;
+    padding: 25px;
+    z-index: 1300;
+}
+
+    #profile-window h2{
+
+        text-align:center;
+        margin-bottom:20px;
+    }
+
+    #profile-window hr {
+        margin-bottom: 20px;
+    }
+
+    #profile-window p {
+        margin-bottom: 14px;
+        font-size:14px;
+    }
+
+    #profile-window close {
+        margin-top: 15px;
+        width:100%;
+        padding:12px;
+        cursor:pointer;
+    }
+
+    /*10.Animation*/
+    /*schweben*/
+    @keyframes signFloat {
+    0%{
+        transform:translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-3px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
