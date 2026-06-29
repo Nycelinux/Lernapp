@@ -24,7 +24,7 @@ function addXP(amount) {
 
 // benötigte XP
 function xpForNextLevel() {
-    return player.level * 100;
+    return CONFIG.LEVEL_BASE_XP + (player.level - 1) * CONFIG.XP_PER_LEVEL;
 }
 
 //Lernzeit

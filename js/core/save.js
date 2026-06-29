@@ -1,21 +1,30 @@
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ * save speichert und lädt den Spielstand
+ *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
+//Spiel speichern
 function saveGame() {
-    localStorage.setItem("level", level);
-    localStorage.setItem("xp", xp);
+    const saveData = {
+        player: player
+    }
+    localStorage.setItem(CONFIG.SAVE_KEY, JSON.stringify(saveData));
+    console.log("Spiel gespeichert!");
 }
 
+//SPiel laden
 function loadGame() {
-    const savedLevel = localStorage.getItem("level");
-    const savedXP = localStorage.getItem("xp");
-    if (savedXP) {
-        xp = Number(savedXP);
-        document.getElementById("xp").innerText = xp;
+    const saveString = localStorage.getItem(CONFIG.SAVE_KEY);
+    if (saveString == null) {
+        console.log("kein Spielstand gefunden");
+        return;
     }
-    if (savedLevel) {
-        level = Number(savedLevel);
-        document.getElementById("level").innerText = level;
+    const saveData = JSON.parse(saveGame);
+
+    if (saveData.player) {
+        Object.assign(player, saveData.player);
     }
+
+    console.log("Spielstand geladen");
 }
 
-loadGame();
 
