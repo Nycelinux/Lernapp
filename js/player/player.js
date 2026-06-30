@@ -52,3 +52,14 @@ function updateProfile() {
     document.getElementById("profile-study-time").innerText = player.studyMinutes+" Minuten";
 
 }
+
+//Entwickler reset
+function resetGame() {
+    player.level = 1;
+    player.xp = 0;
+    player.totalXP = 0;
+    player.studyMinutes = 0;
+    saveGame();
+    updateUI();
+    console.log("Spiel zurückgesetzt");
+}
