@@ -8,6 +8,7 @@ window.addEventListener("DOMContentLoaded", initGame);
 function initGame() {
     console.log("Lernapp gestartet");
     registerRoomEvents();
+    registerUIEvent();
     loadGame();
     updateUI();
 }
@@ -18,18 +19,19 @@ function updateUI() {
 }
 
 //Profilefenster
-const sign = document.getElementById("player-sign");
-const profile = document.getElementById("profile-window");
-const closeProfile = document.getElementById("close-profile");
+function registerUIEvent() {
+    const sign = document.getElementById("player-sign");
+    const profile = document.getElementById("profile-window");
+    const closeProfile = document.getElementById("close-profile");
 
-sign.addEventListener("click", () => {
-    profile.classList.remove("hidden");
-});
+    sign.addEventListener("click", () => {
+        profile.classList.remove("hidden");
+    });
 
-closeProfile.addEventListener("click", () => {
-    profile.classList.add("hidden");
-});
-
+    closeProfile.addEventListener("click", () => {
+        profile.classList.add("hidden");
+    });
+}
 
 
 

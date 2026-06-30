@@ -18,7 +18,7 @@ function loadGame() {
         console.log("kein Spielstand gefunden");
         return;
     }
-    const saveData = JSON.parse(saveGame);
+    const saveData = JSON.parse(saveString);
 
     if (saveData.player) {
         Object.assign(player, saveData.player);

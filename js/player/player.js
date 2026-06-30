@@ -3,7 +3,7 @@
  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
 const player = {
-    level: 0,
+    level: 1,
     xp: 0,
     totalXP: 0,
     studyMinutes: 0
@@ -48,7 +48,7 @@ function updateProfile() {
     document.getElementById("profile-level").innerText = player.level;
     document.getElementById("profile-current-xp").innerText = player.xp;
     document.getElementById("profile-needed-xp").innerText = xpForNextLevel();
-    document.getElementById("profile-total-xp").innerText = player.total-xp;
+    document.getElementById("profile-total-xp").innerText = player.totalXP;
     document.getElementById("profile-study-time").innerText = player.studyMinutes+" Minuten";
 
 }

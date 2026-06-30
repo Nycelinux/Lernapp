@@ -171,7 +171,7 @@ img{
     color:#3d2b20;
     text-align:center;
     margin-bottom:18px;
-    font-size24px;
+    font-size:24px;
 }
     #timer-menu button {
         width: 100%;
@@ -221,12 +221,12 @@ img{
     text-shadow:0 0 10px #5fff73;
 }
 
-#timer-window::after{
-    content:"";
-    position:absolute;
-    inset0;
-    pointer-events:none;
-    background: repeating-linear-gradient(transparent 0px, transparent 2px, rgba(255,255,255, 0.3) 3py;
+#timer-window::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: repeating-linear-gradient(transparent 0px, transparent 2px, rgba(255,255,255, 0.3) 3px,rgba(255,255,255, 0.3) 4px);
 }
 /*8.Popup*/
 #popup {

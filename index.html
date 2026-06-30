@@ -13,7 +13,7 @@
             <div id="player-sign">
                 <div class="leaf leaf-left"></div>
                 <div class="leaf leaf-right"></div>
-                <div id"sign-content">
+                <div id="sign-content">
                     <div id="level-text">
                         Lvl. <span id="level">0</span>
                     </div>
@@ -42,30 +42,30 @@
     <!--Choose Timer popup-->
     <div id="timer-menu" class="hidden">
         <h2> Lernsession</h2>
-        <button onclick="startTimer(120, 10)">
+        <button onclick="startTimer(120, 10, 2)">
             2 Minuten (+10 XP)
         </button>
-        <button onclick="startTimer(300, 25)">
+        <button onclick="startTimer(300, 25, 5)">
             5 Minuten (+25 XP)
         </button>
-        <button onclick="startTimer(600, 60)">
+        <button onclick="startTimer(600, 60, 10)">
             10 Minuten (+60 XP)
         </button>
-        <button onclick="startTimer(900, 90)">
+        <button onclick="startTimer(900, 90, 15)">
             15 Minuten (+90 XP)
         </button>
-        <button onclick="startTimer(1800, 200)">
+        <button onclick="startTimer(1800, 200, 30)">
             30 Minuten (+200 XP)
         </button>
-        <button onclick="startTimer(2700, 350)">
+        <button onclick="startTimer(2700, 350, 45)">
             45 Minuten (+350 XP)
-        </button>
-        <button onclick="startTimer(3600, 500)">
+        </button>x 
+        <button onclick="startTimer(3600, 500, 60)">
             60 Minuten (+500 XP)
         </button>
 
 
-        <button onclick="closeMenu()">
+        <button onclick="closeTimerMenu()">
             Schließen
         </button>
     </div>
@@ -116,12 +116,12 @@
 
     </div>
     <!-- profile später-->
-
+    <script src="js/core/config.js"></script>
+    <script src="js/player/player.js"></script>
+    <script src="js/core/save.js"></script>
+    <script src="js/ui/popup.js"></script>
     <script src="js/room/timer.js"></script>
     <script src="js/room/room.js"></script>
-    <script src="js/player/player.js"></script>
-    <script src="js/core/config.js"></script>
-    <script src="js/core/save.js"></script>
     <script src="js/core/main.js"></script>
 </body>
 </html>

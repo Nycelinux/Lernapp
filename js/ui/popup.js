@@ -8,9 +8,10 @@ const popupMessage = document.getElementById("popup-message");
 const popupButton = document.getElementById("popup-button");
 
 function showPopup(title, message) {
+    popup.classList.remove("hidden");
+    console.log("popup wird geöffnet");
     popupTitle.innerText = title;
     popupMessage.innerText = message;
-    popup.classList.remove("hidden");
 }
 
 function closePopup() {
