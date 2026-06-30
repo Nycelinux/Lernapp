@@ -10,8 +10,8 @@ function initGame() {
     registerRoomEvents();
     registerUIEvent();
     loadGame();
-    updateUI();
     setLighting();
+    updateUI();
 }
 
 function updateUI() {
@@ -36,16 +36,22 @@ function registerUIEvent() {
 
 function setLighting() {
     const hour = new Date().getHours();
+    console.log("Lighting hour: ", hour);
     const lighting = document.getElementById("lighting");
+    let color = "";
     if (hour >= 6 && hour < 18) {
-        lighting.style.background = "var(--sky-day)";
+        console.log("DAY");
+        color = "rgba(255,255,255,0)"
     }
     else if (hour < 21) {
-        lighting.style.background = "var(--sky-evening)";
+        console.log("Evening");
+        color = "rgba(30,20,10,.35)";
     }
     else {
-        lighting.style.background = "var(--sky-night)";
+        console.log("NIGHT");
+        color = "rgba(0,0,0,.65)";
     }
+    lighting.style.background = color;
 }
 
 

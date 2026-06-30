@@ -22,9 +22,9 @@
     --shadow: rgba(0,0,0,0.35);
     --retro-dark: #222;
     --retro-green: #56ff70;
-    --sky-day: rgba(255,245,220,0);
-    --sky-evening: rgba(255,180,80,.18);
-    --sky-night: rgba(15,25,55,.45);
+    --sky-day: rgba(255,255,255,0);
+    --sky-evening: rgba(30,20,10,.35);
+    --sky-night: rgba(0,0,0,.65);
     --lamp-light: rgba(255,235,170, .18);
     --hover: rgba(255,255,255,.18);
     --float-distance:4px;
@@ -45,6 +45,15 @@ html,body
     overflow:hidden;
     font-family:monospace;
     background:#222;
+}
+
+#darkness {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0);
+    pointer-events:none;
+    z-index:6;
+    transition:background 2s ease;
 }
 
 img{
@@ -91,8 +100,9 @@ img{
     position:absolute;
     inset:0;
     pointer-events:none;
-    transition:background 2s;
+    transition:background 2s ease;
     z-index:5;
+    mix-blend-mode:multiply;
 }
 
 /* 4.Holzschild*/
@@ -196,7 +206,8 @@ img{
     cursor: pointer;
 }
 
-#desk-hitbox {
+/*dev-mode*/
+#desk-hitbox:hover {
     outline:2px dashed rgba(255,255,255,.4);
 }
 
