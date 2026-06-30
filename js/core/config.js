@@ -1,5 +1,5 @@
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- * core.js alle Einstellungen des Spiels
+ * config.js alle Einstellungen des Spiels
  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
 const CONFIG = {
@@ -32,5 +32,6 @@ const CONFIG = {
     },
 
     //Speicher
-    SAVE_KEY: "pixel-study-save"
+    SAVE_KEY: "pixel-study-save",
+    VERSION:"0.1"
 };

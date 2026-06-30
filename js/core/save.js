@@ -5,7 +5,8 @@
 //Spiel speichern
 function saveGame() {
     const saveData = {
-        player: player
+        player: player,
+        version: CONFIG.VERSION
     }
     localStorage.setItem(CONFIG.SAVE_KEY, JSON.stringify(saveData));
     console.log("Spiel gespeichert!");
@@ -19,7 +20,9 @@ function loadGame() {
         return;
     }
     const saveData = JSON.parse(saveString);
-
+    if (saveData.version !== CONFIG.VERSION) {
+        console.log("Alter Spielstand erkannt!");
+    }
     if (saveData.player) {
         Object.assign(player, saveData.player);
     }
