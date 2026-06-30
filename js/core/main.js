@@ -11,6 +11,7 @@ function initGame() {
     registerUIEvent();
     loadGame();
     updateUI();
+    setLighting();
 }
 
 function updateUI() {
@@ -31,6 +32,20 @@ function registerUIEvent() {
     closeProfile.addEventListener("click", () => {
         profile.classList.add("hidden");
     });
+}
+
+function setLighting() {
+    const hour = new Date().getHours();
+    const lighting = document.getElementById("lighting");
+    if (hour >= 6 && hour < 18) {
+        lighting.style.background = "var(--sky-day)";
+    }
+    else if (hour < 21) {
+        lighting.style.background = "var(--sky-evening)";
+    }
+    else {
+        lighting.style.background = "var(--sky-night)";
+    }
 }
 
 

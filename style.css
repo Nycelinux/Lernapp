@@ -22,6 +22,12 @@
     --shadow: rgba(0,0,0,0.35);
     --retro-dark: #222;
     --retro-green: #56ff70;
+    --sky-day: rgba(255,245,220,0);
+    --sky-evening: rgba(255,180,80,.18);
+    --sky-night: rgba(15,25,55,.45);
+    --lamp-light: rgba(255,235,170, .18);
+    --hover: rgba(255,255,255,.18);
+    --float-distance:4px;
 }
 
 
@@ -63,8 +69,31 @@ img{
     background-position: center;
     background-repeat:no-repeat;
     position: relative;
+    animation: roomIdle 15s ease-in-out infinite;
 }
 
+@keyframes roomIdle{
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-2px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+
+#lighting{
+    position:absolute;
+    inset:0;
+    pointer-events:none;
+    transition:background 2s;
+    z-index:5;
+}
 
 /* 4.Holzschild*/
 #player-sign {
@@ -109,6 +138,8 @@ img{
     height: 12px;
     background: var(--green-light);
     border-radius: 50% 0;
+    animation:leafSwing 3s ease-in-out infinite;
+    transform-origin:center;
 }
 .leaf-left{
     left:-8px;
@@ -119,6 +150,18 @@ img{
     right: -8px;
     top: -6px;
     transform: rotate(30deg);
+}
+
+@keyframes leafSwing{
+    0%{
+        transform:rotate(-18deg);
+    }
+    50% {
+        transform: rotate(18deg);
+    }
+    100% {
+        transform: rotate(-18deg);
+    }
 }
 
 /*5.XP-Leiste*/
@@ -151,6 +194,19 @@ img{
     width: 250px;
     height: 180px;
     cursor: pointer;
+}
+
+#desk-hitbox {
+    outline:2px dashed rgba(255,255,255,.4);
+}
+
+.furniture{
+    transition: transform .2s, filter .2s;
+}
+
+.furniture:hover {
+    transform:scale(1.02);
+    filter:brightness(1.08);
 }
 
 /* 7.Timer*/
@@ -306,15 +362,15 @@ img{
     /*10.Animation*/
     /*schweben*/
     @keyframes signFloat {
-    0%{
-        transform:translateY(0px);
-    }
+        0%{
+            transform:translateY(0px) rotate(-0.5deg);
+        }
 
-    50% {
-        transform: translateY(-3px);
-    }
+        50% {
+            transform: translateY(-4px) rotate(0.8deg);
+        }
 
-    100% {
-        transform: translateY(0px);
+        100% {
+            transform: translateY(0px) rotate(-0.5deg);
+        }
     }
-}
