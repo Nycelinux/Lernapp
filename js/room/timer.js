@@ -6,14 +6,16 @@ let rewardXP = 0;
 let timerInterval = 0;
 let remainingSeconds = 0;
 let studyMinutes = 0;
+let currentStudyMinutes = 0;
 
 
 //Timer starten
 function startTimer(seconds, reward, minutes) {
+    currentStudyMinutes = minutes;
     closeTimerMenu();
     rewardXP = reward;
     remainingSeconds = seconds;
-    studyMinutes = minutes;
+    
     document.getElementById("timer-window").classList.remove("hidden");
     updateTimerDisplay();
     clearInterval(timerInterval);
@@ -42,6 +44,7 @@ function finishTimer() {
     clearInterval(timerInterval);
     document.getElementById("timer-window").classList.add("hidden");
     addXP(rewardXP);
-    addStudyMinutes(studyMinutes);
+    addStudyMinutes(currentStudyMinutes);
+    updateUI();
     showPopup("Gut gemacht, Lernsession beendet!", `+${rewardXP} XP`);
 }

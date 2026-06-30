@@ -31,6 +31,7 @@ function xpForNextLevel() {
 function addStudyMinutes(minutes) {
     player.studyMinutes += minutes;
     saveGame();
+    updateUI();
 }
 
 
