@@ -59,6 +59,7 @@ Lernapp/
 - Tag/Nacht
 - Musik?
 - Dekorationen
+- Playwright E2E-Tests
   
 ---
 
