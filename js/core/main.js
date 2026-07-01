@@ -28,20 +28,28 @@ function setLighting() {
     const hour = new Date().getHours();
     console.log("Lighting hour: ", hour);
     const lighting = document.getElementById("lighting");
-    let color = "";
+    const light = document.getElementById("light");
+    const darkness = document.getElementById("darkness");
+
+    /*Default*/
+    darkness.style.background = "rgba(0,0,0,0)";
+    light.style.opacity = "0";
+
     if (hour >= 6 && hour < 18) {
         console.log("DAY");
-        color = "rgba(255,255,255,0)"
+        lighting.style.background = "rgba(255,255,255,0)"
     }
     else if (hour < 21) {
         console.log("Evening");
-        color = "rgba(30,20,10,.35)";
+        lighting.style.background = "rgba(30,20,10,.35)";
+        light.style.opacity = "0.15";
     }
     else {
         console.log("NIGHT");
-        color = "rgba(0,0,0,.65)";
+        lighting.style.background = "rgba(0,0,0,.15)";
+        darkness.style.background = "rgba(0,0,0,.65)";
+        light.style.opacity = "0.35";
     }
-    lighting.style.background = color;
 }
 
 
