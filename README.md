@@ -17,6 +17,16 @@ Soll zum lernen motivieren, der Spieler befindet sich in einem gemütlichen Pixe
 
 ---
 
+## Funktionen version 0.2.1
+- [x] animiertes Holzschild
+- [x] Tag-/Nacht-Licht
+- [x] Tagebuch
+- [x] Buchanimation
+- [x] Seitennavigation
+- [x] Daten werden dynamisch gerendert
+
+---
+
 ## Projektstruktur
 ```text
 Lernapp/
@@ -34,7 +44,7 @@ Lernapp/
 │   |   ├── timer.js
 │   └── ui/
 │   |   ├── popup.js
-│   |   ├── profile.js
+│   |   ├── journal.js
 ├── index.html
 └── style.css
 ```
