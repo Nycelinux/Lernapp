@@ -1,0 +1,15 @@
+{
+  "name": "lernapp",
+  "version": "1.0.0",
+  "description": "Cozy Pixel-Art Lernspiel, entwickelt mit HTML, CSS und JS.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.61.1"
+  }
+}

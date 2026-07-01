@@ -8,7 +8,7 @@ window.addEventListener("DOMContentLoaded", initGame);
 function initGame() {
     console.log("Lernapp gestartet");
     registerRoomEvents();
-    registerUIEvent();
+    registerJournalEvents();
     loadGame();
     setLighting();
     updateUI();
@@ -16,23 +16,13 @@ function initGame() {
 
 function updateUI() {
     updateLevelSign();
-    updateProfile();
+    const journalOpen = !document.getElementById("journal-overlay").classList.contains("hidden");
+    if (journalOpen) {
+        updateJournal();
+    }
+    
 }
 
-//Profilefenster
-function registerUIEvent() {
-    const sign = document.getElementById("player-sign");
-    const profile = document.getElementById("profile-window");
-    const closeProfile = document.getElementById("close-profile");
-
-    sign.addEventListener("click", () => {
-        profile.classList.remove("hidden");
-    });
-
-    closeProfile.addEventListener("click", () => {
-        profile.classList.add("hidden");
-    });
-}
 
 function setLighting() {
     const hour = new Date().getHours();

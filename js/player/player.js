@@ -44,16 +44,6 @@ function updateLevelSign() {
 }
 
 
-//Profile
-function updateProfile() {
-    document.getElementById("profile-level").innerText = player.level;
-    document.getElementById("profile-current-xp").innerText = player.xp;
-    document.getElementById("profile-needed-xp").innerText = xpForNextLevel();
-    document.getElementById("profile-total-xp").innerText = player.totalXP;
-    document.getElementById("profile-study-time").innerText = player.studyMinutes+" Minuten";
-
-}
-
 //Entwickler reset
 function resetGame() {
     player.level = 1;

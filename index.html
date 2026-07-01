@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title> Lernapp </title>
     <link rel="stylesheet" href="style.css" >
+    <link rel="stylesheet" href="css/journal.css" >
 </head>
 <body>
     <div id="game">
@@ -90,37 +91,69 @@
         <button id="popup-button">Weiter</button>
     </div>
 
-    <!-- player profile-->
-    <div id="profile-window" class="hidden">
-        <h2>Charakter</h2>
-        <hr>
-        <p>
-            Level: <span id="profile-level">0</span>
-        </p>
-        <p>
-            AKtuelle XP: <span id="profile-current-xp">0</span>
-        </p>
-        <p>
-            Benötigte XP: <span id="profile-needed-xp">100</span>
-        </p>
-        <p>
-            Gesamt XP: <span id="profile-total-xp">0</span>
-        </p>
-        <p>
-            Gesamtlernzeit: <span id="profile-study-time">0 Minuten</span>
-        </p>
+    <!-- player profile/ journal overlay-->
+    <div id="journal-overlay" class="hidden">
+        <div id="journal-backdrop"></div>
 
+        <!-- Tagebuch-->
+        <div id="journal-book">
+            <!-- schließen-->
+            <button id="journal-close">❌</button>
+            <!-- linke TAgebuch Seite-->
+            <div class="journal-page" id="journal-left">
+                <h2>Lernapp</h2>
+                <hr>
+                <p>
+                    <strong>🏆Level</strong><br>
+                    <span id="profile-level">1</span>
+                </p>
+                <p>
+                    <strong>🏅Aktuelle XP</strong><br>
+                    <span id="profile-current-xp">0</span>/
+                    <span id="profile-needed-xp">100</span>
+                </p>
+                <p>
+                    <strong>⭐Gesamt XP</strong><br>
+                    <span id="profile-total-xp">0</span>
+                </p>
+            </div>
+            <!-- rechte TAgebuch Seite-->
+            <div class="journal-page" id="journal-right">
+                <h2>🌿Lernapp</h2>
+                <hr>
+                <p>
+                    <strong>📝Gesamtlernzeit</strong><br>
+                    <span id="profile-study-time">0 Minuten</span>
+                </p>
+                <p>
+                    <strong>📆Heute</strong><br>
+                    Noch keine Session.
+                </p>
+                <p>
+                    <strong>💯Motivation</strong><br>
+                    Jeder kleine Schritt zählt
+                </p>
+            </div>
+
+            <!-- Navigation-->
+            <div id="journal-navigation">
+                <button id="journal-prev">◀️</button>
+                <span id="journal-page-number">Seite 1</span>
+                <button id="journal-next">▶️</button>
+            </div>
+
+        </div>
         <!-- Haustiere,Dekorationen, Lernserie, Quests später-->
 
-        <button id="close-profile">Schließen</button>
-
-
     </div>
+
+        
     <!-- profile später-->
     <script src="js/core/config.js"></script>
     <script src="js/player/player.js"></script>
     <script src="js/core/save.js"></script>
     <script src="js/ui/popup.js"></script>
+    <script src="js/ui/journal.js"></script>
     <script src="js/room/timer.js"></script>
     <script src="js/room/room.js"></script>
     <script src="js/core/main.js"></script>
