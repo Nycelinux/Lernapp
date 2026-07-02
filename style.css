@@ -2,7 +2,7 @@
  Inhalt:
     1.Farben(root)
     2.Grundeinstellungen
-    3.Hintergrund mit Licht
+    3.Hintergrund
     4.Holzschild
     5.XP-Leiste
     6.Hitboxen
@@ -47,6 +47,14 @@ html,body
     background:#222;
 }
 
+#darkness {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0);
+    pointer-events:none;
+    z-index:6;
+    transition:background 2s ease;
+}
 
 img{
     image-rendering:pixelated;
@@ -87,22 +95,22 @@ img{
     }
 }
 
-
-#lighting{
-    position:absolute;
-    inset:0;
-    pointer-events:none;
-    z-index:5;
+#lighting {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 5;
 }
 
 #darkness {
     position: absolute;
     inset: 0;
-    background:rgba(0,0,0,0);
-    pointer-events: none;
+    background: rgba(0,0,0,0.5);
     transition: background 2s ease;
+    pointer-events: none;
     z-index: 6;
 }
+
 
 #light {
     position: absolute;
@@ -115,6 +123,7 @@ img{
     pointer-events: none;
     transition: opacity 1.5s ease;
     z-index: 7;
+    opacity:0;
 }
 
 

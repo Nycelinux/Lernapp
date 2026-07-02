@@ -24,6 +24,7 @@ function updateUI() {
 }
 
 
+
 function setLighting() {
     const hour = new Date().getHours();
     console.log("Lighting hour: ", hour);
@@ -39,18 +40,21 @@ function setLighting() {
         console.log("DAY");
         lighting.style.background = "rgba(255,255,255,0)"
     }
-    else if (hour < 21) {
+    else if (hour >= 18 && hour < 21) {
         console.log("Evening");
         lighting.style.background = "rgba(30,20,10,.35)";
         light.style.opacity = "0.15";
     }
     else {
         console.log("NIGHT");
-        lighting.style.background = "rgba(0,0,0,.15)";
-        darkness.style.background = "rgba(0,0,0,.65)";
-        light.style.opacity = "0.35";
+        lighting.style.background = "rgba(0,0,0,.10)";
+        darkness.style.background = "rgba(0,0,0,.75)";
+        light.style.opacity = "0.25";
     }
+
+
 }
+
 
 
 
