@@ -26,6 +26,10 @@ const journalPages = [
         title: "Quests",
         render: renderQuests
     },
+    {
+        title: "Inventar",
+        render: renderInventar
+    },
 ];
 
 
@@ -133,7 +137,7 @@ function renderStatistics() {
             <hr>
             <p>Sessions: ${statistics.sessions}</p>
             <p>Gesamtzeit: ${statistics.totalMinutes} Minuten</p>
-            <p>Längste Session: ${statistics.longestSessions} Minuten</p>
+            <p>Längste Session: ${statistics.longestSession} Minuten</p>
      `;
     document.getElementById("journal-right").innerHTML = `
             <h2>Fortschritt</h2>
@@ -177,6 +181,35 @@ function renderQuests() {
             html += "<span class='pixel-tag'>Offen</span>";
         }
         html += "</div>";
+
+    });
+    document.getElementById("journal-left").innerHTML = html;
+    document.getElementById("journal-right").innerHTML = "";
+
+}
+
+
+function renderInventar() {
+    let html = "<h2>Inventar </h2><hr>";
+    inventory.forEach(item => {
+        const data = itemDatabase[item.id];
+        if (!data) {
+            html += `
+        <div class="pixel-card">
+            <strong>\u2753 Unbekanntes Item: ${item.id}</strong>
+            <br>
+            x${item.amount}
+        </div>
+    `;
+        }
+
+        html += `
+        <div class="pixel-card">
+            <strong>${data.icon} ${data.name}</strong>
+            <br>
+            x${item.amount}
+        </div>
+    `;
 
     });
     document.getElementById("journal-left").innerHTML = html;

@@ -28,7 +28,7 @@ const achievements = [
     {
         id: "level5",
         title: "Level 5",
-        description: "Schließe die erste Lernsession ab",
+        description: "Erreiche Level 5",
         unlocked: false,
         condition: ()=>player.level>=5
     },
@@ -59,7 +59,7 @@ function checkAchievements() {
     achievements.forEach(a => {
         if (!a.unlocked && a.condition()) {
             a.unlocked = true;
-            showPopup("\uD83D\uDCDD Achievement, a.title");
+            showPopup("\uD83D\uDCDD Achievement", a.title);
         }
 
     });

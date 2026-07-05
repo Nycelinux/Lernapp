@@ -6,10 +6,12 @@ function renderRoom(){
     renderDecoration("plant", "room-plant");
     renderDecoration("books", "room-books");
     renderDecoration("cat", "room-cat");
+    renderDecoration("lamp", "room-lamp");
     //renderLighting()
-    //renderDecorations()
-    //renderPet()
-    //renderParticles()
+    renderDecoration()
+    renderPet()
+    ///renderParticles()
+    //rendeQuestObjects()
   
 }
 

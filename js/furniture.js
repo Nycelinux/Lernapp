@@ -13,6 +13,15 @@ const furniture = [
 
     },
     {
+        id: "plant",
+        name: "Pflanze",
+        description: "kleine Zimmerpflanzen",
+        interact() {
+            openDecorationInfo("plant");
+        }
+
+    },
+    {
         id: "bed",
         name: "Bett",
         description: "schlafen",

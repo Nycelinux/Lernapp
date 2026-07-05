@@ -4,7 +4,7 @@
 
 const statistics = {
     sessions: 0,
-    longestSessions: 0,
+    longestSession: 0,
     totalMinutes: 0,
     todayMinutes: 0,
     weekMinutes: 0,
@@ -20,10 +20,10 @@ function registerStudySession(minutes) {
     statistics.todayMinutes += minutes;
     statistics.weekMinutes += minutes;
     statistics.monthMinutes += minutes;
-    if (minutes > statistics.longestSessions) {
-        statistics.longestSessions = minutes;
+    if (minutes > statistics.longestSession) {
+        statistics.longestSession = minutes;
     }
-    checkAchievement();
+    checkAchievements();
     checkQuest();
     checkPets();
     saveGame();

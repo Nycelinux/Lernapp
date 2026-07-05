@@ -4,7 +4,7 @@
 
 const quests = [
     {
-        id: "leran10",
+        id: "lern10",
         title: "Lern 10 Minuten",
         description:"Lerne insgesamt 10 Minuten",
         rewardXP: 20,
@@ -13,18 +13,18 @@ const quests = [
         condition() { return statistics.totalMinutes >= 10;}
     },
     {
-        id: "leran30",
+        id: "lern30",
         title: "Lern 30 Minuten",
-        description: "Lerne insgesamt 10 Minuten",
+        description: "Lerne insgesamt 30 Minuten",
         rewardXP: 60,
         completed: false,
         rewardClaimed: false,
         condition() { return statistics.totalMinutes >= 30; }
     },
     {
-        id: "leran60",
+        id: "lern60",
         title: "Lern 60 Minuten",
-        description: "Lerne insgesamt 10 Minuten",
+        description: "Lerne insgesamt 60 Minuten",
         rewardXP: 100,
         completed: false,
         rewardClaimed: false,
@@ -52,21 +52,29 @@ const quests = [
 ];
 
 function checkQuest() {
+    let changed = false;
     quests.forEach(q => {
         if (!q.completed && q.condition()) {
             q.completed = true;
+            changed = true;
             showPopup("	\uD83D\uDCDC Quest abgeschlossen", q.title);
         }
     });
+    if (changed) {
+        saveGame();
+    }
 }
 
 function claimQuest(id) {
     const quest = quests.find(q => q.id === id);
+
     if (!quest) return;
     if (!quest.completed) return;
     if (quest.rewardClaimed) return;
+
     quest.rewardClaimed = true;
     addXP(quest.rewardXP);
-    saveGame();
     updateJournal();
+    updateJournalPages();
+    saveGame();
 }
