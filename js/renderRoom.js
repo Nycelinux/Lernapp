@@ -8,8 +8,7 @@ function renderRoom(){
     renderDecoration("cat", "room-cat");
     renderDecoration("lamp", "room-lamp");
     //renderLighting()
-    renderDecoration()
-    renderPet()
+    renderPet();
     ///renderParticles()
     //rendeQuestObjects()
   
@@ -23,10 +22,12 @@ function renderDecoration(saveName, id) {
 
 function renderPet() {
     const pet = document.getElementById("room-pet");
+    if (!pet) return;
     if (!pets.current) {
         pet.classList.add("hidden");
         return;
     }
     pet.src = "assets/pets/" + pets.current + " .png";
+    pet.classList.remove("hidden");
 }
 

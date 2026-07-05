@@ -43,12 +43,7 @@ function updateTimerDisplay() {
 function finishTimer() {
     clearInterval(timerInterval);
     document.getElementById("timer-window").classList.add("hidden");
-    registerStudySession(currentStudyMinutes);
-    addStudyMinutes(currentStudyMinutes);
-    addXP(rewardXP);
-    checkQuest();
-    checkAchievements();
-    updateUI();
+    GameManager.onStudySession(currentStudyMinutes, rewardXP);
     showPopup("Gut gemacht, Lernsession beendet!", `+${rewardXP} XP`);
 }
 

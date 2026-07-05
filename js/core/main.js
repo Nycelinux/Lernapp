@@ -9,9 +9,8 @@ function initGame() {
     console.log("Lernapp gestartet");
     registerRoomEvents();
     registerJournalEvents();
-    loadGame();
+    GameManager.init();
     setLighting();
-    updateUI();
     startAmbient();
 }
 

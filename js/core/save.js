@@ -65,12 +65,12 @@ function loadGame() {
 
     if (saveData.pets) {
         Object.assign(pets, saveData.pets);
-        console.log("Stats AFTER:", pets);
+        console.log("pets AFTER:", pets);
     }
 
     if (saveData.decorations) {
-        Object.assign(statistics, saveData.statistics);
-        console.log("Stats AFTER:", statistics);
+        Object.assign(decorations, saveData.decorations);
+        console.log("decorations AFTER:", decorations);
     }
 
 

@@ -53,7 +53,9 @@ function itemAmount(id) {
     return item ? item.amount : 0;
 }
 
-//testing
-addItems("coin", 10);
-addItems("seed", 3);
-addItems("flower", 1);
+//Dev testing
+function giveDebugItems() {
+    addItems("coin", 10);
+    addItems("seed", 3);
+    addItems("flower", 1);
+}
