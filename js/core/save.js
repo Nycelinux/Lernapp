@@ -5,9 +5,16 @@
 //Spiel speichern
 function saveGame() {
     const saveData = {
-        player: player,
-        version: CONFIG.VERSION
-    }
+        version: CONFIG.VERSION,
+        player,
+        statistics,
+        quests,
+        achievements,
+        inventory,
+        pets,
+        decorations
+
+    };
     localStorage.setItem(CONFIG.SAVE_KEY, JSON.stringify(saveData));
     console.log("Spiel gespeichert!");
 }
@@ -25,9 +32,55 @@ function loadGame() {
     }
     if (saveData.player) {
         Object.assign(player, saveData.player);
+        console.log("PLAYER AFTER:", player);
+    }
+    if (saveData.statistics) {
+        Object.assign(statistics, saveData.statistics);
+        console.log("Stats AFTER:", statistics);
     }
 
+    if (saveData.quests) {
+        saveData.quests.forEach(savedQuest => {
+            const quest = quests.find(q => q.id === savedQuest.id);
+            if (quest) {
+                quest.completed = savedQuest.completed;
+                quest.rewardClaimed = savedQuest.rewardClaimed;
+            }
+        });
+    }
+
+    if (saveData.achievements) {
+        saveData.achievements.forEach(savedArchievement => {
+            const achievement = achievements.find(a => a.id === savedArchievement.id);
+            if (achievement) {
+                achievement.unlocked = savedArchievement.unlocked;
+            }
+        });
+    }
+
+    if (saveData.inventory) {
+        inventory.length = 0;
+        inventory.push(...saveData.inventory);
+    }
+
+    if (saveData.pets) {
+        Object.assign(pets, saveData.pets);
+        console.log("Stats AFTER:", pets);
+    }
+
+    if (saveData.decorations) {
+        Object.assign(statistics, saveData.statistics);
+        console.log("Stats AFTER:", statistics);
+    }
+
+
     console.log("Spielstand geladen");
+    updateUI();
+    if (typeof renderRoom == "function") {
+        renderRoom();
+    }
+    console.log("LOADED:", saveData);
+    
 }
 
 

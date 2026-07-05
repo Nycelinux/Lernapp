@@ -167,6 +167,7 @@ function renderQuests() {
             <h3>${q.title}</h3>
             <p>${q.description}</p>
             <p>Belohnung: ${q.rewardXP}</p>
+            <br>
 
     `;
         if (q.rewardClaimed) {

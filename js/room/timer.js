@@ -43,9 +43,9 @@ function updateTimerDisplay() {
 function finishTimer() {
     clearInterval(timerInterval);
     document.getElementById("timer-window").classList.add("hidden");
-    addXP(rewardXP);
-    addStudyMinutes(currentStudyMinutes);
     registerStudySession(currentStudyMinutes);
+    addStudyMinutes(currentStudyMinutes);
+    addXP(rewardXP);
     checkQuest();
     checkAchievements();
     updateUI();
