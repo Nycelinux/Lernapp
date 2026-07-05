@@ -27,6 +27,7 @@ const GameManager = {
     },
     onStudySession(minutes, xp) {
         registerStudySession(minutes);
+        growPlants();
         addXP(xp);
         addStudyMinutes(minutes);
         this.refresh();
