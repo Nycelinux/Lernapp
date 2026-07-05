@@ -17,7 +17,15 @@ const journalPages = [
     {
         title: "Lernstatistiken",
         render: renderStatistics
-    }
+    },
+    {
+        title: "Achievements",
+        render: renderAchievements
+    },
+    {
+        title: "Quests",
+        render: renderQuests
+    },
 ];
 
 
@@ -123,15 +131,55 @@ function renderStatistics() {
     document.getElementById("journal-left").innerHTML = `
             <h2>Statistik</h2>
             <hr>
-            <p>
-                Heute gelernt
-            </p>
+            <p>Sessions: ${statistics.sessions}</p>
+            <p>Gesamtzeit: ${statistics.totalMinutes} Minuten</p>
+            <p>Längste Session: ${statistics.longestSessions} Minuten</p>
      `;
     document.getElementById("journal-right").innerHTML = `
-            <h2>Coming Soon</h2>
+            <h2>Fortschritt</h2>
             <hr>
-            <p>
-                Hier könnte ein Diagramm stehen.
-            </p>
+            <p>Heute: ${statistics.todayMinutes} Minuten</p>
+            <p>Diese Woche: ${statistics.weekMinutes} Minuten</p>
+            <p>Diesen Monat: ${statistics.monthMinutes} Minuten</p>
      `;
+}
+
+function renderAchievements() {
+    let html = "<h2>Achievements </h2><hr>";
+    achievements.forEach(a => {
+        html += `
+        <p>${a.unlocked ? "\u2705" :"\uD83D\uDD12"} <strong>${a.title}</strong><br> ${a.description}</p>
+    `;
+    });
+        document.getElementById("journal-left").innerHTML = html;
+        document.getElementById("journal-right").innerHTML = "";
+}
+
+function renderQuests() {
+    let html = "<h2>Quests </h2><hr>";
+    quests.forEach(q => {
+        html += `
+        <div class="pixel-card">
+            <h3>${q.title}</h3>
+            <p>${q.description}</p>
+            <p>Belohnung: ${q.rewardXP}</p>
+
+    `;
+        if (q.rewardClaimed) {
+            html += "<span class='pixel-tag green'>Erledigt</span>";
+        }
+        else if (q.completed) {
+             html += `
+                <button onClick="claimQuest('${q.id}')"> Belohnung</button>
+        `;
+        }
+        else {
+            html += "<span class='pixel-tag'>Offen</span>";
+        }
+        html += "</div>";
+
+    });
+    document.getElementById("journal-left").innerHTML = html;
+    document.getElementById("journal-right").innerHTML = "";
+
 }

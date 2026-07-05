@@ -9,14 +9,14 @@
     6.Pixel Tag + Varianten
     7.Scrollbarer Bereich
     8. Divider
-    9.
-    10.
+    9. Inventarslot
+    10. Grid
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
-/*1.Pixelfenster*/
+/*1.Pixelfenster     #6f4e37(border) #efe4c8(background)*/
 .pixel-window{
-    background:#efe4c8;
-    border: 6px solid #6f4e37;
+    background:var(--cream);
+    border: 6px solid var(--wood-dark);
     border-radius:10px;
     box-shadow:8px 8px 0 rgba(0,0,0,.35);
 }
@@ -29,17 +29,26 @@
     margin-bottom:20px;
 }
 
+.pixel-header {
+    text-align: center;
+    font-size: 24px;
+    color: #3b2a1b;
+    margin-bottom: 20px;
+    font-weight:bold;
+}
+
 /*3.Pixel Button*/
 .pixel-button {
     background: #d8c29c;
-    border: 3px solid #6f4e37;
+    border: 3px solid var(--wood-dark);
     cursor:pointer;
     transition:.15s;
     padding: 10px 18px;
+    font-size:16px;
 }
 
 .pixel-button:hover {
-    transform:scale(1.05);
+    transform: scale(1.05) translateY(-2px);
 }
 
 .pixel-button:active {
@@ -55,6 +64,12 @@
     margin:12px 0;
 }
 
+.pixel-card-title {
+    font-size: 18px;
+    font-weight:bold;
+    margin-bottom: 10px;
+}
+
 /* 5.Fortschrittsbalken*/
 .progress {
     width:100%;
@@ -67,7 +82,7 @@
 .progress-fill {
     width: 0%;
     height: 100%;
-    background: #72cf75;
+    background: linear-gradient(to right, #6dc96b, #98e58d);
     transition:.4s;
 }
 
@@ -103,10 +118,26 @@
 
 /*8. Divider*/
 .pixel-divider{
-    height:2px;
+    height:3px;
     background:#b89667;
     margin:18px 0;
 }
 
 
-/**/
+/*9.Inventarslot*/
+.inventory-slot {
+    width: 64px;
+    height: 64px;
+    background: #efe4c8;
+    border: 3px solid #6f4e37;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*10. Grid*/
+.pixel-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill, 64px);
+    gap:10px;
+}

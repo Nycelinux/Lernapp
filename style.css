@@ -9,7 +9,8 @@
     7.Timer
     8.Popup
     9.Profil
-    10.Animationen
+    10.Decoration
+    11.Animationen
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
 /*1.Farben*/
@@ -240,6 +241,17 @@ img{
 .furniture:hover {
     transform:scale(1.02);
     filter:brightness(1.08);
+    outline: 3px solid #fff4;
+    animation:hoverPulse .8s infinite;
+}
+
+.dust {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: antiquewhite;
+    opacity:0.25;
+    animation: dustFloat 12s linear forwards;
 }
 
 /* 7.Timer*/
@@ -392,18 +404,58 @@ img{
         cursor:pointer;
     }
 
-    /*10.Animation*/
-    /*schweben*/
-    @keyframes signFloat {
-        0%{
-            transform:translateY(0px) rotate(-0.5deg);
-        }
+/*10.Decoration*/
+.decoration {
+    position: absolute;
+    image-rendering:pixelated;
+    transition: opacity .4s, transform .4s;
+}
 
-        50% {
-            transform: translateY(-4px) rotate(0.8deg);
-        }
+.decoration.hidden {
+    opacity:0;
+}
 
-        100% {
-            transform: translateY(0px) rotate(-0.5deg);
-        }
+.decoration:not(.hidden) {
+    opacity: 1;
+}
+
+/*11.Animation*/
+/*schweben*/
+@keyframes signFloat {
+    0%{
+        transform:translateY(0px) rotate(-0.5deg);
     }
+
+    50% {
+        transform: translateY(-4px) rotate(0.8deg);
+    }
+
+    100% {
+        transform: translateY(0px) rotate(-0.5deg);
+    }
+}
+
+@keyframes hoverPulse {
+    0% {
+        outline-offset: 0px;
+    }
+
+    50% {
+        outline-offset: 3px;
+    }
+
+    100% {
+        outline-offset: 0px;
+    }
+}
+
+@keyframes dustFloat {
+    from{
+        transform: translateY(40px);
+    }
+
+    to {
+        transform: translateY(120px);
+        opacity:0;
+    }
+}

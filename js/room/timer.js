@@ -45,6 +45,10 @@ function finishTimer() {
     document.getElementById("timer-window").classList.add("hidden");
     addXP(rewardXP);
     addStudyMinutes(currentStudyMinutes);
+    registerStudySession(minutes);
     updateUI();
     showPopup("Gut gemacht, Lernsession beendet!", `+${rewardXP} XP`);
 }
+
+
+

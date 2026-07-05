@@ -12,6 +12,7 @@ function initGame() {
     loadGame();
     setLighting();
     updateUI();
+    startAmbient();
 }
 
 function updateUI() {
@@ -22,7 +23,6 @@ function updateUI() {
     }
     
 }
-
 
 
 function setLighting() {

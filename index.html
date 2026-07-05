@@ -9,23 +9,23 @@
     <link rel="stylesheet" href="css/journal.css" >
 </head>
 <body>
-    <div id="game">
-        <div id="room">
-            <div id="lighting"></div>
-            <div id="darkness"></div>
-            <div id="light"></div>
-            <div id="player-sign">
-                <div class="leaf leaf-left"></div>
-                <div class="leaf leaf-right"></div>
-                <div id="sign-content">
-                    <div id="level-text">
-                        Lvl. <span id="level">0</span>
+    <div id="game" data-testID="game">
+        <div id="room" data-testID="room">
+            <div id="lighting" data-testID="lighting"></div>
+            <div id="darkness" data-testID="darkness"></div>
+            <div id="light" data-testID="light"></div>
+            <div id="player-sign" data-testID="player-sign">
+                <div class="leaf leaf-left" data-testID="leaf-left"></div>
+                <div class="leaf leaf-right" data-testID="leaf-right"></div>
+                <div id="sign-content" data-testID="sign-content">
+                    <div id="level-text" data-testID="level-text">
+                        Lvl. <span id="level" data-testID="level-text">0</span>
                     </div>
 
-                    <div id="xp-bar">
-                        <div id="xp-fill"></div>
+                    <div id="xp-bar" data-testID="xp-bar">
+                        <div id="xp-fill" data-testID="xp-fill"></div>
                     </div>
-                    <div id="xp-text">
+                    <div id="xp-text" data-testID="xp-test">
                         0/100 XP
                     </div>
                 </div>
@@ -34,7 +34,7 @@
 
             <!--Hitboxen-->
             <!--Schreibtisch-->
-            <div id="desk-hitbox"></div>
+            <div id="desk-hitbox" data-testID="desk-hitbox"></div>
             <!--Bett-->
             <!--Bücherregal-->
             <!--Planzen-->
@@ -44,88 +44,88 @@
 
     </div>
     <!--Choose Timer popup-->
-    <div id="timer-menu" class="hidden">
+    <div id="timer-menu" class="hidden" data-testID="timer-menu">
         <h2> Lernsession</h2>
-        <button onclick="startTimer(120, 10, 2)">
+        <button onclick="startTimer(120, 10, 2)" data-testID="timer-2min">
             2 Minuten (+10 XP)
         </button>
-        <button onclick="startTimer(300, 25, 5)">
+        <button onclick="startTimer(300, 25, 5)" data-testID="timer-5min">
             5 Minuten (+25 XP)
         </button>
-        <button onclick="startTimer(600, 60, 10)">
+        <button onclick="startTimer(600, 60, 10)" data-testID="timer-10min">
             10 Minuten (+60 XP)
         </button>
-        <button onclick="startTimer(900, 90, 15)">
+        <button onclick="startTimer(900, 90, 15)" data-testID="timer-15min">
             15 Minuten (+90 XP)
         </button>
-        <button onclick="startTimer(1800, 200, 30)">
+        <button onclick="startTimer(1800, 200, 30)" data-testID="timer-30min">
             30 Minuten (+200 XP)
         </button>
-        <button onclick="startTimer(2700, 350, 45)">
+        <button onclick="startTimer(2700, 350, 45)" data-testID="timer-45min">
             45 Minuten (+350 XP)
         </button>
-        <button onclick="startTimer(3600, 500, 60)">
+        <button onclick="startTimer(3600, 500, 60)" data-testID="timer-60min">
             60 Minuten (+500 XP)
         </button>
 
 
-        <button onclick="closeTimerMenu()">
+        <button onclick="closeTimerMenu()" data-testID="closeTimerMenuBtn">
             Schließen
         </button>
     </div>
 
     <!-- Learn Timer popup-->
-    <div id="timer-window" class="hidden">
-        <div id="retro-title">
+    <div id="timer-window" class="hidden" data-testID="timer-window">
+        <div id="retro-title" data-testID="timer-retro-title">
             <h2> Study Time</h2>
         </div>
-        <div id="timer-display">
+        <div id="timer-display" data-testID="timer-display">
             00:00
         </div>
     </div>
 
     <!-- pixel popup-->
-    <div id="popup" class="hidden">
+    <div id="popup" class="hidden" data-testID="popup">
         <h2 id="popup-title">
             Gut gemacht!
         </h2>
-        <p id="popup-message">+25 XP</p>
-        <button id="popup-button">Weiter</button>
+        <p id="popup-message" data-testID="popup-message">+25 XP</p>
+        <button id="popup-button" data-testID="popup-button-further">Weiter</button>
     </div>
 
     <!-- player profile/ journal overlay-->
-    <div id="journal-overlay" class="hidden">
-        <div id="journal-backdrop"></div>
+    <div id="journal-overlay" class="hidden" data-testID="journal-overlay">
+        <div id="journal-backdrop" data-testID="journal-backdrop"></div>
 
         <!-- Tagebuch-->
-        <div id="journal-book">
+        <div id="journal-book" data-testID="journal-book">
             <!-- schließen-->
-            <button id="journal-close">❌</button>
+            <button id="journal-close" data-testID="journal-close">❌</button>
             <!-- linke TAgebuch Seite-->
-            <div class="journal-page" id="journal-left">
+            <div class="journal-page" id="journal-left" data-testID="journal-left">
                 <h2>Lernapp</h2>
                 <hr>
                 <p>
                     <strong>🏆Level</strong><br>
-                    <span id="profile-level">1</span>
+                    <span id="profile-level" data-testID="profile-level">1</span>
                 </p>
                 <p>
                     <strong>🏅Aktuelle XP</strong><br>
-                    <span id="profile-current-xp">0</span>/
-                    <span id="profile-needed-xp">100</span>
+                    <span id="profile-current-xp" data-testID="profile-current-xp">0</span>/
+                    <span id="profile-needed-xp" data-testID="profile-needed-xp">100</span>
                 </p>
                 <p>
                     <strong>⭐Gesamt XP</strong><br>
-                    <span id="profile-total-xp">0</span>
+                    <span id="profile-total-xp" data-testID="profile-total-xp">0</span>
                 </p>
             </div>
             <!-- rechte TAgebuch Seite-->
-            <div class="journal-page" id="journal-right">
+            <div class="journal-page" id="journal-right" data-testID="journal-right">
                 <h2>🌿Lernapp</h2>
                 <hr>
                 <p>
                     <strong>📝Gesamtlernzeit</strong><br>
-                    <span id="profile-study-time">0 Minuten</span>
+                    <span id="profile-study-time" data-testID="profile-study-time">0 Minuten</span>
                 </p>
                 <p>
                     <strong>📆Heute</strong><br>
@@ -138,26 +138,49 @@
             </div>
 
             <!-- Navigation-->
-            <div id="journal-navigation">
-                <button id="journal-prev">◀️</button>
-                <span id="journal-page-number">Seite 1</span>
-                <button id="journal-next">▶️</button>
+            <div id="journal-navigation" data-testID="journal-navigation">
+                <button id="journal-prev" data-testID="journal-prev">◀️</button>
+                <span id="journal-page-number" data-testID="journal-page-number">Seite 1</span>
+                <button id="journal-next" data-testID="journal-next">▶️</button>
             </div>
 
         </div>
         <!-- Haustiere,Dekorationen, Lernserie, Quests später-->
+        <img id="room-plant" class="hidden decoration" src="assets/" data-testID="room-plant">
+        <img id="room-books" class="hidden decoration" src="assets/" data-testID="room-books">
+        <img id="room-cat" class="hidden decoration" src="assets/" data-testID="room-cat">
+        <img id="room-cat" class="hidden decoration" src="assets/" data-testID="room-plant">
 
     </div>
 
-        
+
     <!-- profile später-->
-    <script src="js/core/config.js"></script>
+
     <script src="js/player/player.js"></script>
-    <script src="js/core/save.js"></script>
+
+    <script src="js/clock.js"></script>
+    <script src="js/furniture.js"></script>
+    <script src="js/particles.js"></script>
+    <script src="js/pets.js"></script>
+    <script src="js/renderRoom.js"></script>
+    <script src="js/weather.js"></script>
+
+    <script src="js/decorations/decorations.js"></script>
+
+    <script src="js/stats/statistics.js"></script>
+
+    <script src="js/quests/quest.js"></script>
+    <script src="js/quests/achievement.js"></script>
+
     <script src="js/ui/popup.js"></script>
     <script src="js/ui/journal.js"></script>
+
     <script src="js/room/timer.js"></script>
     <script src="js/room/room.js"></script>
+    <script src="js/room/ambient.js"></script>
+
+    <script src="js/core/config.js"></script>
+    <script src="js/core/save.js"></script>
     <script src="js/core/main.js"></script>
 </body>
 </html>

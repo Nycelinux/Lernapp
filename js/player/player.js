@@ -18,6 +18,9 @@ function addXP(amount) {
         player.level++;
         showPopup("LEVEL UP!", `Du bist jetzt Level ${player.level}!`);
     }
+    checkQuest();
+    checkAchievements();
+    checkPets();
     updateUI();
     saveGame();
 }
@@ -32,6 +35,7 @@ function addStudyMinutes(minutes) {
     player.studyMinutes += minutes;
     saveGame();
     updateUI();
+    updateQuest(minutes);
 }
 
 
