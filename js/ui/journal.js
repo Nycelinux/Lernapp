@@ -192,23 +192,17 @@ function renderQuests() {
 
 function renderInventar() {
     let html = "<h2>Inventar </h2><hr>";
+    if (inventory.length == 0) {
+        html += "<p>Inventar leer.</p>";
+    }
     inventory.forEach(item => {
         const data = itemDatabase[item.id];
-        if (!data) {
             html += `
         <div class="pixel-card">
-            <strong>\u2753 Unbekanntes Item: ${item.id}</strong>
-            <br>
-            x${item.amount}
-        </div>
-    `;
-        }
-
-        html += `
-        <div class="pixel-card">
-            <strong>${data.icon} ${data.name}</strong>
-            <br>
-            x${item.amount}
+            <h3>${data.icon} ${data.name}</h3>
+            <p>${data.description}</p>
+            <strong>x${item.amount}</strong>
+            
         </div>
     `;
 
