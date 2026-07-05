@@ -3,26 +3,6 @@
  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 const inventory = [];
 
-const itemDatabase = {
-    seed: {
-        name: "Samen",
-        icon: "\uD83E\uDEB4",
-        description: "Kann eingepflanzt werden"
-    },
-    flower: {
-        name: "Blume",
-        icon: "\uD83E\uDEBB",
-    },
-    coin: {
-        name: "Münze",
-        icon: "\uD83E\uDE99",
-    },
-    gem: {
-        name: "Kristall",
-        icon: "\uD83D\uDC8E",
-    }
-};
-
 function addItems(id, amount=1) {
     let item = inventory.find(i => i.id === id);
     if (item) {
