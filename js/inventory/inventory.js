@@ -12,16 +12,21 @@ function addItems(id, amount=1) {
         inventory.push({ id, amount });
     }
     saveGame();
-    renderInventar();
+    if (typeof renderInventar === "function") {
+        renderInventar();
+    }
+        
 }
 
 function removeItems(id, amount = 1) {
     let item = inventory.find(i => i.id === id);
-    if (!item) return;
+    if (!item) return false;
     item.amount -= amount;
     if (item.amount <= 0) {
         inventory.splice(inventory.indexOf(item), 1);
     }
+    saveGame();
+    return true;
 }
 
 function hasItem(id) {
