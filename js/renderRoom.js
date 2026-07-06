@@ -31,3 +31,16 @@ function renderPet() {
     pet.classList.remove("hidden");
 }
 
+
+function renderPlants() {
+    const room = document.getElementById("room");
+    document.querySelectorAll(".room-plant-object").forEach(e => e.remove());
+    plants.forEach(plant => {
+        const img = document.createElement("img");
+        img.className = "room - plant - object";
+        img.src = "assets/plants/" + plant.type + "_stage" + plant.stage + ".png";
+        img.style.left = plant.x + "px";
+        img.style.top = plant.y + "px";
+        room.appendChild(img);
+    });
+}

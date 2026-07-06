@@ -12,7 +12,7 @@ const plantDatabase = {
     }
 };
 
-function plantSeed(type= "flower") {
+/*function plantSeed(type= "flower") {
     if (!hasItem("seed")) {
         showPopup("Error, keine Samen", "Aktuell besitzt du keine Samen");
         return;
@@ -26,4 +26,4 @@ function growPlants() {
     plants.forEach(p => {
         p.growth++;
     });
-}
+} */

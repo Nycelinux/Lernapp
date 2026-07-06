@@ -419,6 +419,13 @@ img{
     opacity: 1;
 }
 
+.room-plant-object {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    image-rendering:pixelated;
+}
+
 /*11.Animation*/
 /*schweben*/
 @keyframes signFloat {
