@@ -8,7 +8,7 @@ function plantSeed(type = "flower") {
         showPopup("Keine Samen", "du besitzt keine Samen");
         return;
     }
-    plants.push({ type, stage:0, growth: 0, x: 650, y:460});
+    plants.push({ id:crypto.randomUUID(),type, stage:0, growth: 0, x: 650, y:460});
     saveGame();
     renderPlants();
 }
@@ -29,7 +29,8 @@ function growPlants() {
 function harvestPlant(id) {
     const plant = plants.find(p => p.id === id);
     if (!plant) return;
-    if (plant.stage < 3) {
+    const data = plantDatabase[plant.type];
+    if (plant.stage < data.stages.length-1) {
         showPopup("Noch nicht fertig", "Diese Pflanze wächst noch");
         return;
     }

@@ -12,7 +12,9 @@ function saveGame() {
         achievements,
         inventory,
         pets,
-        decorations
+        decorations,
+        plants,
+        worldObjekte
 
     };
     localStorage.setItem(CONFIG.SAVE_KEY, JSON.stringify(saveData));
@@ -61,6 +63,16 @@ function loadGame() {
     if (saveData.inventory) {
         inventory.length = 0;
         inventory.push(...saveData.inventory);
+    }
+
+    if (saveData.plants) {
+        plants.length = 0;
+        plants.push(...saveData.plants);
+    }
+
+    if (saveData.worldObjekte) {
+        worldObjekte.length = 0;
+        worldObjekte.push(...saveData.worldObjekte);
     }
 
     if (saveData.pets) {

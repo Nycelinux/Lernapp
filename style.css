@@ -426,43 +426,49 @@ img{
     image-rendering:pixelated;
 }
 
-/*11.Animation*/
-/*schweben*/
-@keyframes signFloat {
-    0%{
-        transform:translateY(0px) rotate(-0.5deg);
-    }
-
-    50% {
-        transform: translateY(-4px) rotate(0.8deg);
-    }
-
-    100% {
-        transform: translateY(0px) rotate(-0.5deg);
-    }
+.world-object {
+    position: absolute;
+    image-rendering: pixelated;
+    cursor:grab;
+    user-select:none;
 }
+    /*11.Animation*/
+    /*schweben*/
+    @keyframes signFloat {
+        0% {
+            transform: translateY(0px) rotate(-0.5deg);
+        }
 
-@keyframes hoverPulse {
-    0% {
-        outline-offset: 0px;
+        50% {
+            transform: translateY(-4px) rotate(0.8deg);
+        }
+
+        100% {
+            transform: translateY(0px) rotate(-0.5deg);
+        }
     }
 
-    50% {
-        outline-offset: 3px;
+    @keyframes hoverPulse {
+        0% {
+            outline-offset: 0px;
+        }
+
+        50% {
+            outline-offset: 3px;
+        }
+
+        100% {
+            outline-offset: 0px;
+        }
     }
 
-    100% {
-        outline-offset: 0px;
-    }
-}
+    @keyframes dustFloat {
+        from {
+            transform: translateY(40px);
+        }
 
-@keyframes dustFloat {
-    from{
-        transform: translateY(40px);
+        to {
+            transform: translateY(120px);
+            opacity: 0;
+        }
     }
-
-    to {
-        transform: translateY(120px);
-        opacity:0;
-    }
-}

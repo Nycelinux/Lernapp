@@ -9,7 +9,10 @@ const itemDatabase = {
         icon: "\uD83E\uDEB4",
         description: "Kann eingepflanzt werden",
         rarity: "common",
-        stackable:true
+        stackable: true,
+        type: "seed",
+        sellValue=1,
+        image:"seed.png"
     },
     flower: {
         id: "flower",

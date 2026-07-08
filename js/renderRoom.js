@@ -9,6 +9,8 @@ function renderRoom(){
     renderDecoration("lamp", "room-lamp");
     //renderLighting()
     renderPet();
+    renderPlants();
+    renderWorld();
     ///renderParticles()
     //rendeQuestObjects()
   
@@ -37,10 +39,26 @@ function renderPlants() {
     document.querySelectorAll(".room-plant-object").forEach(e => e.remove());
     plants.forEach(plant => {
         const img = document.createElement("img");
-        img.className = "room - plant - object";
+        img.className = "room-plant-object";
         img.src = "assets/plants/" + plant.type + "_stage" + plant.stage + ".png";
         img.style.left = plant.x + "px";
         img.style.top = plant.y + "px";
+        room.appendChild(img);
+    });
+}
+
+function renderWorld() {
+    const room = document.getElementById("room");
+    document.querySelectorAll(".world-object").forEach(e => e.remove());
+    worldObjekte.forEach(object => {
+        const data = furnitureDatabase[object.type];
+        if (!data) return;
+        const img = document.createElement("img");
+        img.className = "world-object";
+        img.dataset.id = object.id;
+        img.src = "assets/furniture/" + data.image;
+        img.style.left = object.x + "px";
+        img.style.top = object.y + "px";
         room.appendChild(img);
     });
 }

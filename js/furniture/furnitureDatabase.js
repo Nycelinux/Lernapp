@@ -8,7 +8,10 @@ const furnitureDatabase = {
         name: "Blumentopf",
         image: "plantPot.png",
         width: 48,
-        height: 48
+        height: 48,
+        movable: true,
+        recolorable: true,
+        price:100
     },
     chair: {
         id: "chair",
