@@ -95,7 +95,7 @@ function loadGame() {
     
 }
 
-EventBus.on("studyFinished", () => {
+EventBus.on("progressUpdated", () => {
     saveGame();
 });
 

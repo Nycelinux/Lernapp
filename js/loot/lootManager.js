@@ -21,7 +21,7 @@ function generateLoot(minutes) {
     return rewards;
 }
 
-EventBus.on("studyFinished", data => {
+EventBus.on("progressUpdated", data => {
     const loot = generateLoot(data.minutes);
     if (loot.length === 0) return;
     let lootText = "";

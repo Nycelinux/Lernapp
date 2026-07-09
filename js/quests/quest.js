@@ -79,6 +79,6 @@ function claimQuest(id) {
     saveGame();
 }
 
-EventBus.on("studyFinished", () => {
+EventBus.on("progressUpdated", () => {
     checkQuest();
 });

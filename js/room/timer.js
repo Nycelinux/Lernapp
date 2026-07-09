@@ -44,7 +44,7 @@ function finishTimer() {
     clearInterval(timerInterval);
     document.getElementById("timer-window").classList.add("hidden");
     EventBus.emit("studyFinished", {minutes:currentStudyMinutes, xp:rewardXP})
-    showPopup("Gut gemacht, Lernsession beendet!", `+${rewardXP} XP${lootText}`);
+    showPopup("Gut gemacht, Lernsession beendet!", `+${rewardXP}`);
 }
 
 

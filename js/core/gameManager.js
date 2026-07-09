@@ -11,14 +11,7 @@ const GameManager = {
             renderRoom();
         }
     },
-    saveGame() {
-        saveGame();
-    },
-
     refresh() {
-        checkQuest();
-        checkAchievements();
-        checkPets();
         updateUI();
         if (typeof renderRoom === "function") {
             renderRoom();
@@ -27,9 +20,10 @@ const GameManager = {
     },
     onStudySession(minutes, xp) {
         registerStudySession(minutes);
-        growPlants();
-        addXP(xp);
         addStudyMinutes(minutes);
+        addXP(xp);
+        growPlants();
+        EventBus.emit("progressUpdated", {minutes,xp});
         this.refresh();
     },
     onQuestReward(xp) {
@@ -52,3 +46,7 @@ const GameManager = {
         this.refresh();
     }
 };
+
+EventBus.on("studyFinished", data => {
+    GameManager.onStudySession(data.minutes, data.xp);
+});

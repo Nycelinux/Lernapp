@@ -65,6 +65,6 @@ function checkAchievements() {
     });
 }
 
-EventBus.on("studyFinished", () => {
+EventBus.on("progressUpdated", () => {
     checkAchievements();
 });

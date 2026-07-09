@@ -52,7 +52,7 @@ function setLighting() {
     }
 }
 
-EventBus.on("studyFinished", () => {
+EventBus.on("progressUpdated", () => {
     updateUI();
 });
 
