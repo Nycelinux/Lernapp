@@ -95,4 +95,8 @@ function loadGame() {
     
 }
 
+EventBus.on("studyFinished", () => {
+    saveGame();
+});
+
 

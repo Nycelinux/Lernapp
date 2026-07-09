@@ -14,3 +14,8 @@ function createParticle() {
     }, 5000);
 }
 
+
+EventBus.on("studyFinished", () => {
+    createParticle();
+});
+

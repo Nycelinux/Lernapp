@@ -64,3 +64,7 @@ function checkAchievements() {
 
     });
 }
+
+EventBus.on("studyFinished", () => {
+    checkAchievements();
+});

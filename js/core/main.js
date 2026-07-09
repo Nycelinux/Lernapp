@@ -50,9 +50,11 @@ function setLighting() {
         darkness.style.background = "rgba(0,0,0,.75)";
         light.style.opacity = "0.25";
     }
-
-
 }
+
+EventBus.on("studyFinished", () => {
+    updateUI();
+});
 
 
 
