@@ -78,3 +78,7 @@ function claimQuest(id) {
     updateJournalPages();
     saveGame();
 }
+
+EventBus.on("studyFinished", () => {
+    checkQuest();
+});

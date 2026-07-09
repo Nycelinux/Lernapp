@@ -56,3 +56,8 @@ function resetGame() {
     updateUI();
     console.log("Spiel zurückgesetzt");
 }
+
+EventBus.on("studyFinished", data => {
+    addXP(data.xp);
+    addStudyMinutes(data.minutes);
+});

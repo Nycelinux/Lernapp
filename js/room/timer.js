@@ -43,13 +43,7 @@ function updateTimerDisplay() {
 function finishTimer() {
     clearInterval(timerInterval);
     document.getElementById("timer-window").classList.add("hidden");
-    GameManager.onStudySession(currentStudyMinutes, rewardXP);
-    const loot = generateLoot();
-    let lootText = "";
-    loot.forEach(item => {
-        const data = itemDatabase[item.id];
-        lootText += `\n${data.icon} x${item.amount}`;
-    });
+    EventBus.emit("studyFinished", {minutes:currentStudyMinutes, xp:rewardXP})
     showPopup("Gut gemacht, Lernsession beendet!", `+${rewardXP} XP${lootText}`);
 }
 

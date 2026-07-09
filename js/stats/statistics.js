@@ -28,3 +28,7 @@ function registerStudySession(minutes) {
     checkPets();
     saveGame();
 }
+
+EventBus.on("studyFinished", data => {
+    registerStudySession(data.minutes);
+});
