@@ -26,7 +26,7 @@ function placeObject(type, x = 500, y = 400) {
 }
 
 function moveObject(id, x, y) {
-  const object = worldObjekte.find((object) => object.id == id);
+  const object = worldObjekte.find(object => object.id == id);
   if (!object) return;
   object.x = x;
   object.y = y;

@@ -3,44 +3,44 @@
  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 const inventory = [];
 
-function addItems(id, amount=1) {
-    let item = inventory.find(i => i.id === id);
-    if (item) {
-        item.amount += amount;
-    }
-    else {
-        inventory.push({ id, amount });
-    }
-    saveGame();
-    if (typeof renderInventar === "function") {
-        renderInventar();
-    }
-        
+function addItems(id, amount = 1) {
+  let item = inventory.find((i) => i.id === id);
+  if (item) {
+    item.amount += amount;
+  } else {
+    inventory.push({ id, amount });
+  }
+  saveGame();
+  if (typeof renderInventar === "function") {
+    renderInventar();
+  }
 }
 
 function removeItems(id, amount = 1) {
-    let item = inventory.find(i => i.id === id);
-    if (!item) return false;
-    item.amount -= amount;
-    if (item.amount <= 0) {
-        inventory.splice(inventory.indexOf(item), 1);
-    }
-    saveGame();
-    return true;
+  let item = inventory.find((i) => i.id === id);
+  if (!item) return false;
+
+  if (item.amount < amount) return false;
+  item.amount -= amount;
+  if (item.amount === 0) {
+    inventory.splice(inventory.indexOf(item), 1);
+  }
+  saveGame();
+  return true;
 }
 
 function hasItem(id) {
-    return inventory.some(i => i.id === id);
+  return inventory.some((i) => i.id === id);
 }
 
 function itemAmount(id) {
-    let item = inventory.find(i => i.id === id);
-    return item ? item.amount : 0;
+  let item = inventory.find((i) => i.id === id);
+  return item ? item.amount : 0;
 }
 
 //Dev testing
 function giveDebugItems() {
-    addItems("coin", 10);
-    addItems("seed", 3);
-    addItems("flower", 1);
+  addItems("coin", 10);
+  addItems("seed", 3);
+  addItems("flower", 1);
 }

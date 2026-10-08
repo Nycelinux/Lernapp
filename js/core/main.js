@@ -8,6 +8,7 @@ window.addEventListener("DOMContentLoaded", initGame);
 function initGame() {
   console.log("Lernapp gestartet");
   registerRoomEvents();
+  registerRoomMenuEvents();
   registerJournalEvents();
   GameManager.init();
   setLighting();
