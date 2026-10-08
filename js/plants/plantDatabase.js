@@ -3,13 +3,11 @@
  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
 const plantDatabase = {
-    flower: {
-        name: "Blume",
-        stages: [
-            "\uD83C\uDF31", "\uD83E\uDEB4", "\uD83C\uDF38"
-        ],
-        growthNeeded: 3
-    }
+  flower: {
+    name: "Blume",
+    stages: ["\uD83C\uDF31", "\uD83E\uDEB4", "\uD83C\uDF38"],
+    growthNeeded: 3,
+  },
 };
 
 /*function plantSeed(type= "flower") {

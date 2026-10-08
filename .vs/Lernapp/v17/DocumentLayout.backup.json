@@ -1,0 +1,233 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\nikey\\source\\repos\\Lernapp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\nikey\\source\\repos\\Lernapp\\js\\core\\save.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:js\\core\\save.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\nikey\\source\\repos\\Lernapp\\js\\plants\\plants.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:js\\plants\\plants.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\nikey\\source\\repos\\Lernapp\\js\\furniture\\furnitureDatabase.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:js\\furniture\\furnitureDatabase.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\nikey\\source\\repos\\Lernapp\\js\\furniture\\furnitureInventory.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:js\\furniture\\furnitureInventory.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\nikey\\source\\repos\\Lernapp\\js\\world\\placement.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:js\\world\\placement.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\nikey\\source\\repos\\Lernapp\\js\\core\\gameManager.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:js\\core\\gameManager.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\nikey\\source\\repos\\Lernapp\\js\\loot\\lootManager.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:js\\loot\\lootManager.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\nikey\\source\\repos\\Lernapp\\js\\room\\timer.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:js\\room\\timer.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\nikey\\source\\repos\\Lernapp\\js\\core\\main.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:js\\core\\main.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\nikey\\source\\repos\\Lernapp\\js\\core\\EventBus.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:js\\core\\EventBus.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\nikey\\source\\repos\\Lernapp\\js\\particles.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:js\\particles.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\nikey\\source\\repos\\Lernapp\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "placement.js",
+              "DocumentMoniker": "C:\\Users\\nikey\\source\\repos\\Lernapp\\js\\world\\placement.js",
+              "RelativeDocumentMoniker": "js\\world\\placement.js",
+              "ToolTip": "C:\\Users\\nikey\\source\\repos\\Lernapp\\js\\world\\placement.js",
+              "RelativeToolTip": "js\\world\\placement.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-07-09T22:53:39.445Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "furnitureInventory.js",
+              "DocumentMoniker": "C:\\Users\\nikey\\source\\repos\\Lernapp\\js\\furniture\\furnitureInventory.js",
+              "RelativeDocumentMoniker": "js\\furniture\\furnitureInventory.js",
+              "ToolTip": "C:\\Users\\nikey\\source\\repos\\Lernapp\\js\\furniture\\furnitureInventory.js",
+              "RelativeToolTip": "js\\furniture\\furnitureInventory.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-07-09T22:50:35.166Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "furnitureDatabase.js",
+              "DocumentMoniker": "C:\\Users\\nikey\\source\\repos\\Lernapp\\js\\furniture\\furnitureDatabase.js",
+              "RelativeDocumentMoniker": "js\\furniture\\furnitureDatabase.js",
+              "ToolTip": "C:\\Users\\nikey\\source\\repos\\Lernapp\\js\\furniture\\furnitureDatabase.js",
+              "RelativeToolTip": "js\\furniture\\furnitureDatabase.js",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAACgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-07-09T22:47:21.435Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "plants.js",
+              "DocumentMoniker": "C:\\Users\\nikey\\source\\repos\\Lernapp\\js\\plants\\plants.js",
+              "RelativeDocumentMoniker": "js\\plants\\plants.js",
+              "ToolTip": "C:\\Users\\nikey\\source\\repos\\Lernapp\\js\\plants\\plants.js",
+              "RelativeToolTip": "js\\plants\\plants.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACwAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-07-09T22:26:43.478Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "save.js",
+              "DocumentMoniker": "C:\\Users\\nikey\\source\\repos\\Lernapp\\js\\core\\save.js",
+              "RelativeDocumentMoniker": "js\\core\\save.js",
+              "ToolTip": "C:\\Users\\nikey\\source\\repos\\Lernapp\\js\\core\\save.js",
+              "RelativeToolTip": "js\\core\\save.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-07-09T21:12:08.342Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "main.js",
+              "DocumentMoniker": "C:\\Users\\nikey\\source\\repos\\Lernapp\\js\\core\\main.js",
+              "RelativeDocumentMoniker": "js\\core\\main.js",
+              "ToolTip": "C:\\Users\\nikey\\source\\repos\\Lernapp\\js\\core\\main.js",
+              "RelativeToolTip": "js\\core\\main.js",
+              "ViewState": "AQIAADAAAAAAAAAAAAAAADwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-06-30T22:02:20.336Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "timer.js",
+              "DocumentMoniker": "C:\\Users\\nikey\\source\\repos\\Lernapp\\js\\room\\timer.js",
+              "RelativeDocumentMoniker": "js\\room\\timer.js",
+              "ToolTip": "C:\\Users\\nikey\\source\\repos\\Lernapp\\js\\room\\timer.js",
+              "RelativeToolTip": "js\\room\\timer.js",
+              "ViewState": "AQIAABgAAAAAAAAAAAAYwCEAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-07-08T23:52:36.915Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "gameManager.js",
+              "DocumentMoniker": "C:\\Users\\nikey\\source\\repos\\Lernapp\\js\\core\\gameManager.js",
+              "RelativeDocumentMoniker": "js\\core\\gameManager.js",
+              "ToolTip": "C:\\Users\\nikey\\source\\repos\\Lernapp\\js\\core\\gameManager.js",
+              "RelativeToolTip": "js\\core\\gameManager.js",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAABgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-07-09T21:47:39.327Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "lootManager.js",
+              "DocumentMoniker": "C:\\Users\\nikey\\source\\repos\\Lernapp\\js\\loot\\lootManager.js",
+              "RelativeDocumentMoniker": "js\\loot\\lootManager.js",
+              "ToolTip": "C:\\Users\\nikey\\source\\repos\\Lernapp\\js\\loot\\lootManager.js",
+              "RelativeToolTip": "js\\loot\\lootManager.js",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAYwBcAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-07-09T21:30:01.156Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "particles.js",
+              "DocumentMoniker": "C:\\Users\\nikey\\source\\repos\\Lernapp\\js\\particles.js",
+              "RelativeDocumentMoniker": "js\\particles.js",
+              "ToolTip": "C:\\Users\\nikey\\source\\repos\\Lernapp\\js\\particles.js",
+              "RelativeToolTip": "js\\particles.js",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-07-09T21:14:15.367Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "EventBus.js",
+              "DocumentMoniker": "C:\\Users\\nikey\\source\\repos\\Lernapp\\js\\core\\EventBus.js",
+              "RelativeDocumentMoniker": "js\\core\\EventBus.js",
+              "ToolTip": "C:\\Users\\nikey\\source\\repos\\Lernapp\\js\\core\\EventBus.js",
+              "RelativeToolTip": "js\\core\\EventBus.js",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAACAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-07-08T23:51:11.488Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "index.html",
+              "DocumentMoniker": "C:\\Users\\nikey\\source\\repos\\Lernapp\\index.html",
+              "RelativeDocumentMoniker": "index.html",
+              "ToolTip": "C:\\Users\\nikey\\source\\repos\\Lernapp\\index.html",
+              "RelativeToolTip": "index.html",
+              "ViewState": "AQIAAJkAAAAAAAAAAAAqwKIAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2026-06-29T22:51:33.262Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

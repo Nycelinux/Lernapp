@@ -4,15 +4,12 @@
 
 const itemDatabase = {
     seed: {
-        id:"seed",
+        id: "seed",
         name: "Samen",
         icon: "\uD83E\uDEB4",
         description: "Kann eingepflanzt werden",
         rarity: "common",
         stackable: true,
-        type: "seed",
-        sellValue=1,
-        image:"seed.png"
     },
     flower: {
         id: "flower",
@@ -24,9 +21,9 @@ const itemDatabase = {
     },
     coin: {
         id: "coin",
-        name: "Münze",
+        name: "Mï¿½nze",
         icon: "\uD83E\uDE99",
-        description: "Währung der Welt",
+        description: "Wï¿½hrung der Welt",
         rarity: "common",
         stackable: true
     },

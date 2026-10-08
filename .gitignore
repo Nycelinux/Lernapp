@@ -6,3 +6,34 @@ node_modules/
 /blob-report/
 /playwright/.cache/
 /playwright/.auth/
+
+# =========================
+# Visual Studio
+# =========================
+
+.vs/
+*.suo
+*.wsuo
+*.vsidx
+
+# =========================
+# Local / generated files
+# =========================
+
+*.log
+
+# =========================
+# Local save / data files
+# =========================
+
+# Falls deine App eigene JSON-Spielstände erzeugt:
+# saves/
+# data/
+# *.save.json
+
+# =========================
+# OS
+# =========================
+
+.DS_Store
+Thumbs.db
